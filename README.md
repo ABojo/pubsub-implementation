@@ -12,13 +12,15 @@ const controlObject = new PubSub();
 //a basic logger function
 const messageLogger = (data) => console.log(`Message Logger: ${data}`);
 
-//subscribes to the newMessage event so the messageLogger function will fire whenever that event is published
+//subscribes to the newMessage event so the 
+//messageLogger function will fire whenever that event is published
 controlObject.subscribe('newMessage', messageLogger);
 
 //publishes a new event which will cause call all subscribers to the newMessage event
 controlObject.publish('newMessage', 'Here is a new message to be logged!');
 
-//unsubscribes the messageLogger function from the newMessage event so it will no longer be called when that event is published
+//unsubscribes the messageLogger function from the newMessage event 
+//so it will no longer be called when that event is published
 controlObject.unsubscribe('newMessage', messageLogger);
 
 ```
