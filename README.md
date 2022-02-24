@@ -16,7 +16,7 @@ const messageLogger = (data) => console.log(`Message Logger: ${data}`);
 //messageLogger function will fire whenever that event is published
 controlObject.subscribe('newMessage', messageLogger);
 
-//publishes a new event which will cause call all subscribers to the newMessage event
+//publishes a new event which will call all subscribers to the newMessage event
 controlObject.publish('newMessage', 'Here is a new message to be logged!');
 
 //unsubscribes the messageLogger function from the newMessage event 
